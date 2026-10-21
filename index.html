@@ -1,0 +1,52 @@
+<!DOCTYPE html> <htm
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Expense Tracker</h1>
+            <p>Track your spending, manage your money.</p>
+        </header>
+        <section class="summary">
+            <p>Total Expenses</p>
+            <h2 id="total">₱0.00</h2>
+        </section>
+        <section class="form-section">
+            <h2>Add New Expense</h2>
+            <form id="expense-form">
+                <label for="expense-name">Expense Name</label>
+                <input id="expense-name" type="text"
+                    placeholder="e.g. Food, Transportation" required>
+                <label for="expense-amount">Amount (₱)</label>
+                <input id="expense-amount" type="number"
+                    min="0.01" step="0.01" placeholder="0.00" required>
+                <label for="expense-category">Category</label>
+                <select id="expense-category" required>
+                    <option value="Food">Food</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="School">School</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Other">Other</option>
+                </select>
+                <button type="submit">+ Add Expense</button>
+            </form>
+        </section>
+        <section class="history">
+            <h2>Expense History</h2>
+            <ul id="expense-list"></ul>
+            <p id="empty-message">No expenses yet. Add your first expense!</p>
+            <button id="clear-button" class="clear-button" type="button">
+                Clear All Expenses
+            </button>
+        </section>
+    </main>
+</body>
+</html>
